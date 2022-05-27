@@ -1,0 +1,14 @@
+if you want  port+dir+param bruteforcing at the same time?
+EX: https://test(.)com:PORT/DIR?PORT=1
+
+command:
+seq 1 65535 >ports.txt |ffuf  -w "ports.txt:PORT" -w "./common.txt:DIR" -w "./burp-parameter-names.txt:PARAM" -u "http://test.com:PORT/DIR?PARAM=1" -t 300 -ac -
+v
+
+ffuf tool download link:
+https://github.com/ffuf/ffuf
+
+paramter+dir list download:
+https://github.com/danielmiessler/SecLists
+
+
